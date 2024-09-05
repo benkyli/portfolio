@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: black;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    background-color: lightblue;
+    margin: 0px;
+}
+
+.home {
+    margin-right: auto;
+    font-size: 2rem;
+}
+
+.navbarItem {
+    margin: 0px 20px;
+    font-size: 2rem;
+}
+
