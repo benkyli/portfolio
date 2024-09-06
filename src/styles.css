@@ -2,15 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
+    margin:0%;
 }
 
 .navbar {
     display: flex;
     width: 100%;
     background-color: lightblue;
-    margin: 0px;
+    position: fixed;
+    top: 0;
 }
 
 .home {
@@ -18,8 +25,17 @@ body {
     font-size: 2rem;
 }
 
-.navbarItem {
-    margin: 0px 20px;
+.navbarItems {
     font-size: 2rem;
+    justify-content: space-between;
 }
 
+.navbarItem {
+
+}
+
+@media screen and (max-width: 526px) {
+    .navbarItems {
+        display: none;
+    }
+}
