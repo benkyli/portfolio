@@ -20,21 +20,23 @@ body {
     top: 0;
 }
 
+.home, .navbarItems {
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+
 .home {
     margin-right: auto;
-    font-size: 2rem;
 }
 
+/* text inside isn't space properly */
 .navbarItems {
-    font-size: 2rem;
+    display: flex;
     justify-content: space-between;
-}
+    min-width: 475px;
+} 
 
-.navbarItem {
-
-}
-
-@media screen and (max-width: 526px) {
+@media screen and (max-width: 800px) {
     .navbarItems {
         display: none;
     }
