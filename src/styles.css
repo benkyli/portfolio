@@ -47,7 +47,7 @@ body {
         position: fixed;
         display: flex;
         right: 0;
-        min-width: 300px;
+        width: 100vw;
         height: 100vh;
         background-color: rgba(165, 109, 109, 0.945);
         flex-direction: column;
