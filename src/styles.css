@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
@@ -9,7 +14,6 @@ html {
 
 body {
     background-color: black;
-    margin:0%;
 }
 
 .navbar {
@@ -29,7 +33,6 @@ body {
     margin-right: auto;
 }
 
-/* text inside isn't space properly */
 .navbarItems {
     display: flex;
     justify-content: space-between;
@@ -37,7 +40,19 @@ body {
 } 
 
 @media screen and (max-width: 800px) {
-    .navbarItems {
+    .home {
         display: none;
+    }
+    .navbarItems {
+        position: fixed;
+        display: flex;
+        right: 0;
+        min-width: 300px;
+        height: 100vh;
+        background-color: rgba(165, 109, 109, 0.945);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
     }
 }

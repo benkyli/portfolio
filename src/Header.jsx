@@ -1,7 +1,7 @@
 export default function Header() {
     return(
         <nav class='navbar'>
-            <a class='home' href='#home'>BL</a>
+            <a class='home' href='#index'>BL</a>
             <div class='navbarItems'>
                 <a href='#about'>About</a>
                 <a href='#projects'>Projects</a>
