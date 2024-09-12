@@ -8,11 +8,13 @@ export default function Header() {
         setIsOpen(!isOpen);
     };
 
+    // add IoClose styling here or something. So add a hover, move to right side. 
+
     const navbarMenu = (isOpen) => {
         if (isOpen) {
             return (
                 <div class='navbarMenu'>
-                    <a onClick={toggleMenu}><IoClose /></a>
+                    <div onClick={toggleMenu}><IoClose /></div>
                     <a href='#about'>About</a>
                     <a href='#projects'>Projects</a>
                     <a href='#resume'>Resume</a>
@@ -32,7 +34,7 @@ export default function Header() {
                     <a href='#resume'>Resume</a>
                     <a href='#contact'>Contact</a>
                 </div>
-                <a class='menuToggle' onClick={toggleMenu}><IoMenu/></a>
+                <a class='menuToggle' onClick={toggleMenu}>{isOpen ? null : <IoMenu/>}</a>
             </nav>
             {navbarMenu(isOpen)}
         </div>
