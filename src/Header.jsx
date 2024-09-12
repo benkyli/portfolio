@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IoMenu, IoCloseOutline } from "react-icons/io5";
+import { IoMenu, IoClose } from "react-icons/io5";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -7,6 +7,20 @@ export default function Header() {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+    const navbarMenu = (isOpen) => {
+        if (isOpen) {
+            return (
+                <div class='navbarMenu'>
+                    <a onClick={toggleMenu}><IoClose /></a>
+                    <a href='#about'>About</a>
+                    <a href='#projects'>Projects</a>
+                    <a href='#resume'>Resume</a>
+                    <a href='#contact'>Contact</a>
+                </div>
+            )
+        } 
+    }
     
     return (
         <div>
@@ -18,24 +32,10 @@ export default function Header() {
                     <a href='#resume'>Resume</a>
                     <a href='#contact'>Contact</a>
                 </div>
-                <div class='menuToggle'> 
-                    <button onClick={toggleMenu}>{isOpen ? <IoCloseOutline /> : <IoMenu />}</button>
-                </div>
+                <a class='menuToggle' onClick={toggleMenu}><IoMenu/></a>
             </nav>
             {navbarMenu(isOpen)}
         </div>
     )
 }
 
-function navbarMenu (isOpen) {
-    if (isOpen) {
-        return (
-            <div class='navbarMenu'>
-                <a href='#about'>About</a>
-                <a href='#projects'>Projects</a>
-                <a href='#resume'>Resume</a>
-                <a href='#contact'>Contact</a>
-            </div>
-        )
-    }
-}
