@@ -1,5 +1,8 @@
 import { useState } from 'react';
+import { IconContext} from 'react-icons';
 import { IoMenu, IoClose } from "react-icons/io5";
+
+
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,35 +11,20 @@ export default function Header() {
         setIsOpen(!isOpen);
     };
 
-    // add IoClose styling here or something. So add a hover, move to right side. 
-
-    const navbarMenu = (isOpen) => {
-        if (isOpen) {
-            return (
-                <div class='navbarMenu'>
-                    <div onClick={toggleMenu}><IoClose /></div>
-                    <a href='#about'>About</a>
-                    <a href='#projects'>Projects</a>
-                    <a href='#resume'>Resume</a>
-                    <a href='#contact'>Contact</a>
-                </div>
-            )
-        } 
-    }
-    
     return (
         <div>
-            <nav class='navbar'>
-                <a class='home' href='#index'>BL</a>
-                <div class='navbarItems'>
+            <nav id='navbar'>
+                <a id='home' href='#index'>BL</a>
+                <div id='navbarItems' className={isOpen ? 'navbarItems active' : 'navbarItems'}>
                     <a href='#about'>About</a>
                     <a href='#projects'>Projects</a>
                     <a href='#resume'>Resume</a>
                     <a href='#contact'>Contact</a>
                 </div>
-                <a class='menuToggle' onClick={toggleMenu}>{isOpen ? null : <IoMenu/>}</a>
+                <IconContext.Provider value={{ style: { cursor: 'pointer' } }}>
+                    <a id='menuToggle' onClick={toggleMenu}>{isOpen ? <IoClose /> : <IoMenu/>}</a>
+                </IconContext.Provider>
             </nav>
-            {navbarMenu(isOpen)}
         </div>
     )
 }

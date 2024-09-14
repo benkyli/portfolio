@@ -13,11 +13,11 @@ html {
 }
 
 body {
-    background-color: blue;
+    background-color: light blue;
     min-height: 100vh;
 }
 
-.navbar {
+#navbar {
     display: flex;
     width: 100%;
     background-color: lightblue;
@@ -36,53 +36,50 @@ a:hover {
     color: #acacac
 }
 
-.home {
+#home {
     margin-right: auto;
 }
 
 .navbarItems {
     display: flex;
     justify-content: space-between;
-    min-width: 475px;
+    width: 475px;
     gap: 25px;
 } 
 
-.menuToggle {
+#menuToggle {
     display: none;
     height: 1rem;
 }
 
-.navbarMenu {
-    position: fixed;
-    display: none;
-    right: 0;
-    width: 50vw;
-    height: 100vh;
-    z-index: 999;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    transition: ease-in-out all; 
-    background-color: rgba(255, 255, 255, 0.76);
-    backdrop-filter: blur(10px);
-
-    a {
-        width: 100%;
-        padding: 1rem;
-        font-size: 2rem;
-    }
-}
-
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
     .navbarItems {
-        display: none;
-    }
-
-    .menuToggle {
-        display: inline-block;
-    }
-
-    .navbarMenu {
+        position: fixed;
         display: flex;
+        right: -100vw;
+        width: 40vw;
+        top: 5.1rem;
+        height: 100vh;
+        z-index: 999;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: rgba(255, 255, 255, 0.76);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        transition: 0.8s;
+        
+        
+    }
+
+    .navbarItems.active {
+        right: 0;
+        transition: 0.2s;
+
+    }
+
+    #menuToggle {
+        display: block;
     }
 }
