@@ -13,8 +13,9 @@ html {
 }
 
 body {
-    background-color: light blue;
     min-height: 100vh;
+    background-color: rgb(55, 43, 108);
+    color: white;
 }
 
 .heading {
@@ -25,11 +26,12 @@ body {
 #navbar {
     display: flex;
     width: 100%;
-    background-color: lightblue;
     position: fixed;
     top: 0;
     font-size: 2rem;
     padding: 0.7em;
+    background-color: transparent;
+    padding: 1em 3em;
 }
 
 a, a:visited, a:active {
@@ -55,6 +57,13 @@ a:hover {
 #menuToggle {
     display: none;
     height: 1rem;
+}
+
+#sunset {
+    z-index: 1;
+    size: small;
+    saturation: low;
+    outer-edges: fade-black;
 }
 
 @media (max-width: 800px) {
