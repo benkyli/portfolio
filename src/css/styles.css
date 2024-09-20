@@ -54,7 +54,8 @@ a:active {
     text-decoration: none;
 }
 
-a:hover {
+a:hover,
+button:hover {
     color: #acacac
 }
 
