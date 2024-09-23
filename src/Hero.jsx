@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
 
 export default function Hero() {
     const openInNewTab  = (url) => {
@@ -8,8 +8,11 @@ export default function Hero() {
 
     return (
         <div className='hero'>
-            <div>Benjamin Li</div>
-            <a href=''>Resume</a>
+            <div id='name'>Benjamin Li</div>
+            <button className='resume-box'>
+                <FaFileDownload />
+                <div>Resume</div>
+            </button>
             <div className='flex gap-6 text-4xl'>
                 <button onClick={() => openInNewTab('https://github.com/benkyli')}><FaGithub /></button>
                 <button onClick={() => openInNewTab('https://www.linkedin.com/in/benjamin-li-73b622295')}><FaLinkedin /></button> 

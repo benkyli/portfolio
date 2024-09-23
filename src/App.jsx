@@ -5,6 +5,7 @@ import About from './About.jsx';
 import Contact  from './Contact.jsx';
 import './css/styles.css';
 import './css/tailwind.css';
+import './css/fonts.css';
 
 export default function App() {
     return (

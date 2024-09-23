@@ -554,6 +554,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
@@ -562,9 +566,31 @@ video {
   gap: 1.5rem;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 * {
@@ -584,15 +610,33 @@ body {
 }
 
 .hero {
+  overflow: auto;
+  position: relative;
+  top: 45vh;
   display: flex;
   align-items: center;
   place-content: center;
   flex-direction: column;
-  background-image: linear-gradient(rgb(0, 0, 0, .5), rgb(0, 0, 0, .5)), url('src/images/sunsetMtFuji.jpg');
-  background-position: center;
+}
+
+.hero::before {
+  background-image: url('src/images/sunsetMtFuji.jpg');
+  content: "";
+  position: fixed;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
   background-size: cover;
-  height: 100vh;
+  background-position: center;
   background-repeat: no-repeat;
+  z-index: -1;
+  filter: brightness(50%) blur(3px);
+}
+
+#name {
+  font-family: 'Chakra Petch';
+  font-size: 4em;
 }
 
 .heading {
@@ -645,13 +689,13 @@ button:hover {
     position: fixed;
     display: flex;
     right: -100vw;
-    width: 40vw;
+    width: 100vw;
     top: 5.1rem;
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: rgba(255, 255, 255, 0.76);
+    background-color: rgba(255, 255, 255, 0.273);
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
     padding: 1rem;
