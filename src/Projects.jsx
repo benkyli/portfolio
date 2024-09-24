@@ -1,5 +1,7 @@
 export default function Projects() {
     return (
-        <h2 className='heading'>Projects</h2>
+        <div id='projects' className='section'>
+            <h2 className='heading'>Projects</h2>
+        </div>
     )
 }

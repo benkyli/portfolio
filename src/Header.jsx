@@ -12,7 +12,7 @@ export default function Header() {
     return (
         <div>
             <nav id='navbar'>
-                <a id='home' href='#index'>BL</a>
+                <a id='home' href='/'>BL</a>
                 <div id='navbarItems' className={isOpen ? 'navbarItems active' : 'navbarItems'}>
                     <a href='#projects'>Projects</a>
                     <a href='#about'>About</a>

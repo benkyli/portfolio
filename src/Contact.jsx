@@ -1,6 +1,6 @@
 export default function Contact() {
     return (
-        <div>
+        <div id='contact' className='section'>
             <h2 className='heading'>Contact</h2>
             <div>
                 email form code

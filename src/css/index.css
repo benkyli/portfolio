@@ -20,9 +20,9 @@ body {
 
 .hero {
     overflow: auto;
-    position: relative;
+    position: static;
+    height: 100vh;
     top: 45vh;
-
     display: flex;
     align-items: center;
     place-content: center;
@@ -60,9 +60,15 @@ body {
     border-radius: 30px;
 }
 
+.section {
+    position: relative;
+}
+
 .heading {
     font-size: 2em;
     margin-top: 2.7em;
+    padding: 2em;
+    margin: 2em;
 }
 
 #navbar {
