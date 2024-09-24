@@ -27,11 +27,12 @@ body {
     align-items: center;
     place-content: center;
     flex-direction: column;
+
 }
 
 .hero::before {
     background-image: url('src/images/sunsetMtFuji.jpg');
-    content: "";
+    content: '';
     position: fixed;
     display: block;
     height: 100%;
@@ -55,7 +56,7 @@ body {
     background-color: grey;
     gap: 0.4rem;
     padding: 12px 30px;
-    margin: 2em 0 2.5em 0;
+    margin: 1.8em 0 2.5em 0;
     border-radius: 30px;
 }
 
