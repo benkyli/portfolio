@@ -18,46 +18,16 @@ body {
     color: white;
 }
 
-.hero {
-    overflow: auto;
-    position: static;
-    height: 100vh;
-    top: 45vh;
-    display: flex;
-    align-items: center;
-    place-content: center;
-    flex-direction: column;
-
+a,
+a:visited,
+a:active {
+    color: inherit;
+    text-decoration: none;
 }
 
-.hero::before {
-    background-image: url('src/images/sunsetMtFuji.jpg');
-    content: '';
-    position: fixed;
-    display: block;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    filter: brightness(50%) blur(3px);
-}
-
-#name {
-    font-family: 'Chakra Petch';
-    font-size: 4em;
-}
-
-.resume-box {
-    display: flex;
-    font-size: 1em;
-    background-color: grey;
-    gap: 0.4rem;
-    padding: 12px 30px;
-    margin: 1.8em 0 2.5em 0;
-    border-radius: 30px;
+a:hover,
+button:hover {
+    color: #acacac
 }
 
 .section {
@@ -80,18 +50,7 @@ body {
     padding: 0.7em;
     padding: 1em 3em;
     z-index: 999;
-}
-
-a,
-a:visited,
-a:active {
-    color: inherit;
-    text-decoration: none;
-}
-
-a:hover,
-button:hover {
-    color: #acacac
+    align-items: center;
 }
 
 #home {
@@ -107,7 +66,6 @@ button:hover {
 
 #menuToggle {
     display: none;
-    height: 1rem;
 }
 
 @media (max-width: 800px) {
@@ -138,6 +96,49 @@ button:hover {
     }
 }
 
+.hero {
+    overflow: auto;
+    position: static;
+    height: 100vh;
+    top: 45vh;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    flex-direction: column;
+
+}
+
+.hero::before {
+    background-image: url('src/images/sunsetMtFuji.jpg');
+    content: '';
+    position: fixed;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: brightness(50%) blur(3px);
+}
+
+#name {
+    font-family: 'Chakra Petch';
+    font-size: 4.5em;
+}
+
+.resume-box {
+    display: flex;
+    font-size: 1em;
+    background-color: grey;
+    gap: 0.4rem;
+    padding: 12px 30px;
+    margin: 1.8em 0 2.5em 0;
+    border-radius: 30px;
+    align-items: center;
+}
+
 .card-section {
     height: 600px;
 }
@@ -148,8 +149,5 @@ button:hover {
     border-radius: 10px;
     border-color: black;
     background-color: rgb(140, 96, 83);
-    display: block;
-
-
-
+    display: flex;
 }
