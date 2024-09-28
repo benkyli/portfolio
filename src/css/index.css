@@ -51,8 +51,16 @@ button:hover {
     z-index: 999;
     align-items: center;
     justify-content: space-between;
-    backdrop-filter: blur(10px);
+}
 
+.navbar::before {
+    /* this is to allow for nested backdrop blurs */
+    content: '';
+    position: absolute;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .navbarItems {
