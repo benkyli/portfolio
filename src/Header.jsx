@@ -11,15 +11,15 @@ export default function Header() {
 
     return (
         <div>
-            <nav id='navbar'>
-                <a id='home' href='/'>BL</a>
-                <div id='navbarItems' className={isOpen ? 'navbarItems active' : 'navbarItems'}>
+            <nav className='navbar'>
+                <a className='home' href='/'>BL</a>
+                <div className={isOpen ? 'navbarItems active' : 'navbarItems'}>
                     <a href='#projects'>Projects</a>
                     <a href='#about'>About</a>
                     <a href='#contact'>Contact</a>
                 </div>
                 <IconContext.Provider value={{ style: { cursor: 'pointer' } }}>
-                    <a id='menuToggle' onClick={toggleMenu}>{isOpen ? <IoClose /> : <IoMenu/>}</a>
+                    <a className='menuToggle' onClick={toggleMenu}>{isOpen ? <IoClose /> : <IoMenu/>}</a>
                 </IconContext.Provider>
             </nav>
         </div>

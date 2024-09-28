@@ -41,7 +41,7 @@ button:hover {
     margin: 2em 2em 0;
 }
 
-#navbar {
+.navbar {
     display: flex;
     width: 100%;
     position: fixed;
@@ -61,7 +61,7 @@ button:hover {
     gap: 25px;
 }
 
-#menuToggle {
+.menuToggle {
     display: none;
 }
 
@@ -88,7 +88,7 @@ button:hover {
         transition: 0.2s;
     }
 
-    #menuToggle {
+    .menuToggle {
         display: block;
     }
 }
