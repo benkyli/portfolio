@@ -1,13 +1,21 @@
+import { AiOutlineExpandAlt } from "react-icons/ai";
+
 export default function ProjectCard() {
     return (
-        // might want to make a data file that has each project's information. 
-        // Then loop through those here
+        // loop through data file for inner content of the cards
         <span className='project-card'>
             <img src='' alt='project image identifier'></img>
+            <hr  />
             <h3 className='project-title'>Title</h3> 
+            < AiOutlineExpandAlt />
+            <hr />
             <h4 className='project-description'>description</h4> 
-            <span>
-                <h5>insert languages, frameworks, apis, other tools</h5>
+            <hr />
+            
+            <span className='tool-tags flex gap-2'>
+                <span>language</span>
+                <span>framework</span>
+                <span>api</span>
             </span>
         </span>
     )

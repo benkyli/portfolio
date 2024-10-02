@@ -34,7 +34,7 @@ button:hover {
 .heading {
     font-size: 2em;
     font-family: sans-serif;
-    padding: 2em;
+    padding: 1em;
     margin: 2em 2em 0;
 }
 
@@ -170,6 +170,7 @@ button:hover {
     border-color: black;
     background-color: rgb(140, 96, 83);
     display: flex;
+    flex-direction: column;
     padding: 1rem;
     margin: 1rem;
 }

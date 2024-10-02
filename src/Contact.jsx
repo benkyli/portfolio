@@ -7,9 +7,9 @@ export default function Contact() {
         const newTab = window.open(url, '_blank',  'noopener,noreferrer');
         if (newTab) newTab.opener = null
     }
-    
+
     return (
-        <div className='contact section'>
+        <div id='contact' className='section'>
             <h2 className='heading'>Contact</h2>
             <ContactForm />
             <div className='socials'>
