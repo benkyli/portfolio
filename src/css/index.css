@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* global styles */
 * {
     padding: 0;
     margin: 0;
@@ -38,6 +39,7 @@ button:hover {
     margin: 2em 2em 0;
 }
 
+/* header + nav section */
 .navbar {
     display: flex;
     width: 100%;
@@ -51,7 +53,7 @@ button:hover {
 }
 
 .navbar::before {
-    /* this is to allow for nested backdrop blurs */
+    /* this enables nested backdrop blurs */
     content: '';
     position: absolute;
     backdrop-filter: blur(10px);
@@ -111,6 +113,7 @@ button:hover {
     }
 }
 
+/* hero section */
 .hero {
     overflow: auto;
     position: static;
@@ -154,6 +157,7 @@ button:hover {
     align-items: center;
 }
 
+/* project section */
 .project-card-container {
     padding: 2em;
     margin: 2.5em;
