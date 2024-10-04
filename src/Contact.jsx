@@ -16,7 +16,7 @@ export default function Contact() {
                 <button onClick={() => openInNewTab('https://github.com/benkyli')}><FaGithub /></button>
                 <button onClick={() => openInNewTab('https://www.linkedin.com/in/benjamin-li-73b622295')}><FaLinkedin /></button> 
                 <a href='mailto:benjaminli@hotmail.ca'>
-                    <MdOutlineEmail /> benjaminli@hotmail.ca
+                    <MdOutlineEmail /> <p>benjaminli@hotmail.ca</p>
                 </a>
             </div>
         </div>

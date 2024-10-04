@@ -178,3 +178,36 @@ button:hover {
     padding: 1rem;
     margin: 1rem;
 }
+
+/* contact form */
+.contact-form {
+    width: 40vw;
+    height: 60vh;
+    padding: 3em;
+    margin: 0 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 8px inset #0000003b;
+
+
+    input {
+        height: 2rem;
+        padding: 0.5rem;
+        background: rgba(36, 36, 36, 0.534);
+    }
+
+    textarea {
+        height: 6rem;
+        background: rgba(36, 36, 36, 0.534);
+        padding: 0.4rem 0.6rem;
+    }
+
+    button {
+        border-radius: 5px;
+        border: solid;
+        border-color: black;
+        width: 8rem;
+    }
+}
