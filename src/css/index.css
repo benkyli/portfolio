@@ -37,6 +37,7 @@ button:hover {
     font-family: sans-serif;
     padding: 1em;
     margin: 2em 2em 0;
+    display: block;
 }
 
 /* header + nav section */
@@ -179,7 +180,13 @@ button:hover {
     margin: 1rem;
 }
 
-/* contact form */
+/* contact section */
+.contact-information {
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+}
+
 .contact-form {
     width: 40vw;
     height: 60vh;
@@ -190,7 +197,7 @@ button:hover {
     gap: 1rem;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 8px inset #0000003b;
-
+    border-radius: 10px;
 
     input {
         height: 2rem;
@@ -207,7 +214,8 @@ button:hover {
     button {
         border-radius: 5px;
         border: solid;
-        border-color: black;
+        border-color: rgb(34, 34, 34);
+        background-color: rgba(0, 0, 0, 0.216);
         width: 8rem;
     }
 }

@@ -11,13 +11,15 @@ export default function Contact() {
     return (
         <div id='contact' className='section'>
             <h2 className='heading'>Contact</h2>
-            <ContactForm />
-            <div className='socials'>
-                <button onClick={() => openInNewTab('https://github.com/benkyli')}><FaGithub /></button>
-                <button onClick={() => openInNewTab('https://www.linkedin.com/in/benjamin-li-73b622295')}><FaLinkedin /></button> 
-                <a href='mailto:benjaminli@hotmail.ca'>
-                    <MdOutlineEmail /> <p>benjaminli@hotmail.ca</p>
-                </a>
+            <div className='contact-information'>
+                <div className='socials'>
+                    <button onClick={() => openInNewTab('https://github.com/benkyli')}><FaGithub /></button>
+                    <button onClick={() => openInNewTab('https://www.linkedin.com/in/benjamin-li-73b622295')}><FaLinkedin /></button> 
+                    <a href='mailto:benjaminli@hotmail.ca'>
+                        <MdOutlineEmail /> <p>benjaminli@hotmail.ca</p>
+                    </a>
+                </div>
+                <ContactForm />
             </div>
         </div>
     )
