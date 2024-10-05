@@ -12,12 +12,14 @@ export default function Contact() {
         <div id='contact' className='section'>
             <h2 className='heading'>Contact</h2>
             <div className='contact-information'>
-                <div className='socials'>
+                <div className='socials flex flex-col gap-4 text-2xl'>
+                    <span>Location</span>
                     <button onClick={() => openInNewTab('https://github.com/benkyli')}><FaGithub /></button>
                     <button onClick={() => openInNewTab('https://www.linkedin.com/in/benjamin-li-73b622295')}><FaLinkedin /></button> 
-                    <a href='mailto:benjaminli@hotmail.ca'>
+                    <a href='mailto:benjaminli@hotmail.ca' className='flex items-center'>
                         <MdOutlineEmail /> <p>benjaminli@hotmail.ca</p>
                     </a>
+                    <span>phone</span>
                 </div>
                 <ContactForm />
             </div>

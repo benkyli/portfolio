@@ -12,8 +12,8 @@ export default function App() {
         <div>
             <Header />
             <Hero />
-            <Projects />
             <About />
+            <Projects />
             <Contact />
             <Footer />
         </div>

@@ -14,8 +14,8 @@ export default function Header() {
             <nav className='navbar'>
                 <a className='home' href='/'>BL</a>
                 <div className={isOpen ? 'navbarItems active' : 'navbarItems'}>
-                    <a href='#projects'>Projects</a>
                     <a href='#about'>About</a>
+                    <a href='#projects'>Projects</a>
                     <a href='#contact'>Contact</a>
                 </div>
                 <IconContext.Provider value={{ style: { cursor: 'pointer' } }}>
