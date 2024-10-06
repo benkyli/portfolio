@@ -32,12 +32,21 @@ button:hover {
     color: #acacac
 }
 
+/* shared classes for each section*/
 .heading {
     font-size: 2em;
     font-family: sans-serif;
-    padding: 3.5em 1em;
+    padding: 3.5em 1em 2em;
     margin: 2em 2em 0;
     display: block;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2em;
+    margin: 2em;
 }
 
 /* header + nav section */
@@ -159,14 +168,6 @@ button:hover {
 }
 
 /* project section */
-.project-card-container {
-    padding: 2em;
-    margin: 2.5em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .project-card {
     min-width: 400px;
     min-height: 400px;
@@ -180,15 +181,6 @@ button:hover {
 }
 
 /* contact section */
-.contact-information {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2em 6em;
-    margin: 2em;
-    gap: 10vw;
-}
-
 .contact-form {
     min-width: 40vw;
     min-height: 60vh;

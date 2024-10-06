@@ -11,7 +11,7 @@ export default function Contact() {
     return (
         <div id='contact' className='section'>
             <h2 className='heading'>Contact</h2>
-            <div className='contact-information'>
+            <div className='content-container'>
                 <div className='socials flex flex-col gap-4 text-2xl'>
                     <span>Location</span>
                     <button onClick={() => openInNewTab('https://github.com/benkyli')}><FaGithub /></button>
