@@ -1,6 +1,6 @@
 import { AiOutlineExpandAlt } from "react-icons/ai";
 
-export default function ProjectCard() {
+export default function ProjectCard(props) {
     return (
         // loop through data file for inner content of the cards
         <span className='project-card'>
@@ -19,4 +19,6 @@ export default function ProjectCard() {
             </span>
         </span>
     )
+    // include default props
+    // include props types
 }

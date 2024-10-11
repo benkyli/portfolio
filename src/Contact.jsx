@@ -7,11 +7,11 @@ export default function Contact() {
         const newTab = window.open(url, '_blank',  'noopener,noreferrer');
         if (newTab) newTab.opener = null
     }
-
+// maybe move the socials to a separate component
     return (
         <div id='contact' className='section'>
             <h2 className='heading'>Contact</h2>
-            <div className='content-container'>
+            <div className='content-container justify-center gap-16'>
                 <div className='socials flex flex-col gap-4 text-2xl'>
                     <span>Location</span>
                     <button onClick={() => openInNewTab('https://github.com/benkyli')}><FaGithub /></button>
