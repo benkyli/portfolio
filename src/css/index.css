@@ -191,6 +191,11 @@ button:hover {
     box-shadow: 0 0 8px inset #0000003b;
     border-radius: 10px;
 
+    .form-section {
+        display: flex;
+        flex-direction: column;
+    }
+
     input {
         height: 2rem;
         padding: 0.5rem;
@@ -209,5 +214,9 @@ button:hover {
         border-color: rgb(34, 34, 34);
         background-color: rgba(0, 0, 0, 0.216);
         width: 8rem;
+    }
+
+    .error {
+        color: red;
     }
 }

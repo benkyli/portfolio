@@ -1,32 +1,59 @@
 import { useForm } from 'react-hook-form';
 import { DevTool } from '@hookform/devtools';
 
-
-
 export default function ContactForm() {
 
-    const { register, control, handleSubmit } = useForm();
+    const { register, 
+            control, 
+            handleSubmit, 
+            formState: { errors } 
+        } = useForm();
 
-    const onSubmit = (data) => {
-        console.log('Form submitted', data)
-    }
+    const onSubmit = (data) => console.log(data);
 
-    // validation is tricky here. Decide if having rhf handle everything is necessary w/ noValidate. Might be excessive. 
     return (
         <div>
-        <form className='contact-form' onSubmit={handleSubmit(onSubmit)}  noValidate>
+        <form className='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
             <p>Contact Form</p>
-            <div className='flex flex-col'>
-                <label for='name'>Full Name</label>
-                <input type='text' {...register('name', { required: true })} placeholder='Enter your name'/>
+            <div className='form-section'>
+                <label for='contactname'>Full Name</label>
+                <input id='contactname' type='text' placeholder='Enter your name' 
+                    {...register('contactname', { 
+                        required: {
+                            value: true,
+                            message: 'Name required'
+                        },
+                    })} 
+                />
+                <p className='error'>{errors.contactname?.message}</p>
             </div>
-            <div className='flex flex-col'>
-                <label for='email'>Email</label>
-                <input type='email' {...register('email', { required: true })} placeholder='Enter your email'/>
+            <div className='form-section'>
+                <label for='contactemail'>Email</label>
+                <input id='contactemail' type='email' placeholder='Enter your email'
+                    {...register('contactemail', { 
+                        required: {
+                            value: true,
+                            message: 'Email required'
+                        }, 
+                        pattern: {
+                            value: /\S+@\S+\.\S+/,
+                            message: 'Invalid email format',
+                        },
+                    })} 
+                />
+                <p className='error'>{errors.contactemail?.message}</p>
             </div>
-            <div className='flex flex-col'>
-                <label for='message'>Message</label>
-                <textarea type='text' {...register('message')} placeholder='Enter your message' cols='10' rows='2'></textarea>
+            <div className='form-section'>
+                <label for='contactmessage'>Message</label>
+                <textarea id='contactmessage' type='text' placeholder='Enter your message' cols='10' rows='2'
+                    {...register('contactmessage', {
+                        required: {
+                            value: true,
+                            message: 'Message cannot be empty'
+                        }
+                    })} 
+                />
+                <p className='error'>{errors.contactmessage?.message}</p>
             </div>
             <button type='submit'>Send Message</button>
         </form>
