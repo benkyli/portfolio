@@ -7,7 +7,13 @@ export default function ContactForm() {
             control, 
             handleSubmit, 
             formState: { errors } 
-        } = useForm();
+        } = useForm({
+            defaultValues: {
+                contactname: '',
+                contactemail: '',
+                contactmessage: '',
+            }
+        });
 
     const onSubmit = (data) => console.log(data);
 
