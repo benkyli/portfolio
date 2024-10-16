@@ -1,12 +1,15 @@
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { DevTool } from '@hookform/devtools';
 
 export default function ContactForm() {
 
+    // get methods from useForm and set default values
     const { register, 
             control, 
             handleSubmit, 
-            formState: { errors } 
+            formState: { errors, isSubmitSuccessful },
+            reset 
         } = useForm({
             defaultValues: {
                 contactname: '',
@@ -15,11 +18,20 @@ export default function ContactForm() {
             }
         });
 
-    const onSubmit = (data) => console.log(data);
+    // submission request and reset
+    const onSubmit = (data) => {
+        console.log('send data to actual thing')
+    };
+
+    useEffect(() => {
+        if (isSubmitSuccessful) {
+            reset();
+        }
+    }, [isSubmitSuccessful, reset]);
 
     return (
         <div>
-        <form className='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
+        <form className='contact-form' onSubmit={handleSubmit(onSubmit)} onSuccess={() => {alert('Message sent')}} noValidate>
             <p>Contact Form</p>
             <div className='form-section'>
                 <label for='contactname'>Full Name</label>
