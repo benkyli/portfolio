@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IconContext} from 'react-icons';
+import { IconContext } from 'react-icons';
 import { IoMenu, IoClose } from "react-icons/io5";
 
 export default function Header() {
@@ -19,7 +19,7 @@ export default function Header() {
                     <a href='#contact'>Contact</a>
                 </div>
                 <IconContext.Provider value={{ style: { cursor: 'pointer' } }}>
-                    <a className='menuToggle' onClick={toggleMenu}>{isOpen ? <IoClose /> : <IoMenu/>}</a>
+                    <a className='menuToggle' onClick={toggleMenu}>{isOpen ? <IoClose /> : <IoMenu />}</a>
                 </IconContext.Provider>
             </nav>
         </div>
