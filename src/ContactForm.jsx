@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { DevTool } from '@hookform/devtools';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
+
+const access_key = 'INSERT ACCESS KEY';
 
 export default function ContactForm() {
 
@@ -12,11 +15,16 @@ export default function ContactForm() {
         reset
     } = useForm({
         defaultValues: {
-            contactname: '',
-            contactemail: '',
-            contactmessage: '',
+            contact_name: '',
+            contact_email: '',
+            contact_message: '',
         }
     });
+
+    // hcaptcha
+    const onHCaptchaChange = (token) => {
+        setValue("h-captcha-response", token);
+    };
 
     // submission request and reset
     const [isSuccess, setIsSuccess] = useState(false);
@@ -59,10 +67,15 @@ export default function ContactForm() {
         <div>
             <form className='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
                 <p>Contact Form</p>
+                <input
+                    type="hidden"
+                    value={access_key}
+                    {...register("access_key")}
+                />
                 <div className='form-section'>
-                    <label htmlFor='contactname'>Full Name</label>
-                    <input id='contactname' type='text' placeholder='Enter your name'
-                        {...register('contactname', {
+                    <label htmlFor='contact_name'>Full Name</label>
+                    <input id='contact_name' type='text' placeholder='Enter your name'
+                        {...register('contact_name', {
                             required: {
                                 value: true,
                                 message: 'Name required'
@@ -72,9 +85,9 @@ export default function ContactForm() {
                     <p className='error'>{errors.contactname?.message}</p>
                 </div>
                 <div className='form-section'>
-                    <label htmlFor='contactemail'>Email</label>
-                    <input id='contactemail' type='email' placeholder='Enter your email'
-                        {...register('contactemail', {
+                    <label htmlFor='contact_email'>Email</label>
+                    <input id='contact_email' type='email' placeholder='Enter your email'
+                        {...register('contact_email', {
                             required: {
                                 value: true,
                                 message: 'Email required'
@@ -85,22 +98,30 @@ export default function ContactForm() {
                             },
                         })}
                     />
-                    <p className='error'>{errors.contactemail?.message}</p>
+                    <p className='error'>{errors.contact_email?.message}</p>
                 </div>
                 <div className='form-section'>
-                    <label htmlFor='contactmessage'>Message</label>
-                    <textarea id='contactmessage' type='text' placeholder='Enter your message' cols='10' rows='2'
-                        {...register('contactmessage', {
+                    <label htmlFor='contact_message'>Message</label>
+                    <textarea id='contact_message' type='text' placeholder='Enter your message' cols='10' rows='2'
+                        {...register('contact_message', {
                             required: {
                                 value: true,
                                 message: 'Message cannot be empty'
                             }
                         })}
                     />
-                    <p className='error'>{errors.contactmessage?.message}</p>
+                    <p className='error'>{errors.contact_message?.message}</p>
                 </div>
+
+                <div className="h-captcha" data-captcha="true"></div>
+                <HCaptcha
+                    sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                    reCaptchaCompat={false}
+                    onVerify={onHCaptchaChange}
+                />
                 <button type='submit'>Send Message</button>
             </form>
+            <script src="https://web3forms.com/client/script.js" async defer></script>
             <DevTool control={control} />
         </div>
     )
