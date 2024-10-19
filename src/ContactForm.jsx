@@ -112,16 +112,9 @@ export default function ContactForm() {
                     />
                     <p className='error'>{errors.contact_message?.message}</p>
                 </div>
-
                 <div className="h-captcha" data-captcha="true"></div>
-                <HCaptcha
-                    sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-                    reCaptchaCompat={false}
-                    onVerify={onHCaptchaChange}
-                />
                 <button type='submit'>Send Message</button>
             </form>
-            <script src="https://web3forms.com/client/script.js" async defer></script>
             <DevTool control={control} />
         </div>
     )
