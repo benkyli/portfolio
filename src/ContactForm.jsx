@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { DevTool } from '@hookform/devtools';
-import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 const access_key = 'INSERT ACCESS KEY';
 
@@ -12,6 +11,8 @@ export default function ContactForm() {
         control,
         handleSubmit,
         formState: { errors, isSubmitSuccessful },
+        getValues,
+        watch,
         reset
     } = useForm({
         defaultValues: {
@@ -21,16 +22,17 @@ export default function ContactForm() {
         }
     });
 
-    // hcaptcha
-    const onHCaptchaChange = (token) => {
-        setValue("h-captcha-response", token);
-    };
-
     // submission request and reset
     const [isSuccess, setIsSuccess] = useState(false);
     const [Message, setMessage] = useState("");
 
     const onSubmit = async (data, e) => {
+
+        // check honeypot
+        if (getValues('password')) { console.log('hi') }
+        else { console.log('bye') };
+
+        // attempt to send message through api
         await fetch("https://api.web3forms.com/submit", {
             method: "POST",
             headers: {
@@ -57,6 +59,7 @@ export default function ContactForm() {
             });
     };
 
+    // change this to check response
     useEffect(() => {
         if (isSubmitSuccessful) {
             reset();
@@ -112,8 +115,11 @@ export default function ContactForm() {
                     />
                     <p className='error'>{errors.contact_message?.message}</p>
                 </div>
-                <div className="h-captcha" data-captcha="true"></div>
-                <button type='submit'>Send Message</button>
+                {/* spam honeypot trap; not an actual password */}
+                <input type="text" name="password_botcheck" className={'hidden'} tabIndex="-1" autoComplete="false"
+                    {...register('password')}
+                />
+                <button type='submit' disabled={watch('password')}>Send Message</button>
             </form>
             <DevTool control={control} />
         </div>
