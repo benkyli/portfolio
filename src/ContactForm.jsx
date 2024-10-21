@@ -29,8 +29,7 @@ export default function ContactForm() {
     const onSubmit = async (data, e) => {
 
         // check honeypot
-        if (getValues('password')) { console.log('hi') }
-        else { console.log('bye') };
+        if (getValues('password')) { return };
 
         // attempt to send message through api
         await fetch("https://api.web3forms.com/submit", {
@@ -59,17 +58,10 @@ export default function ContactForm() {
             });
     };
 
-    // change this to check response
-    useEffect(() => {
-        if (isSubmitSuccessful) {
-            reset();
-        }
-    }, [isSubmitSuccessful, reset]);
-
     return (
         <div>
             <form className='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
-                <p>Contact Form</p>
+                <p className='text-xl'>Contact Form</p>
                 <input
                     type="hidden"
                     value={access_key}
@@ -120,6 +112,9 @@ export default function ContactForm() {
                     {...register('password')}
                 />
                 <button type='submit' disabled={watch('password')}>Send Message</button>
+                {/* submission success messages */}
+                {isSubmitSuccessful && isSuccess && (<p className='text-green-500'>Message sent!</p>)}
+                {isSubmitSuccessful && !isSuccess && (<p className='text-red-600'>Message failed to send. Please try again.</p>)}
             </form>
             <DevTool control={control} />
         </div>
