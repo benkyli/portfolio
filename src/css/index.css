@@ -180,6 +180,12 @@ button:hover {
 }
 
 /* contact section */
+.social-field {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .contact-form {
     min-width: 40vw;
     min-height: 60vh;

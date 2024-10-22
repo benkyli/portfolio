@@ -1,6 +1,5 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdOutlineEmail } from "react-icons/md";
 import ContactForm from './ContactForm.jsx'
+import ContactSocials from './ContactSocials.jsx'
 
 export default function Contact() {
     const openInNewTab = (url) => {
@@ -12,15 +11,7 @@ export default function Contact() {
         <div id='contact' className='section'>
             <h2 className='heading'>Contact</h2>
             <div className='content-container justify-center gap-16'>
-                <div className='socials flex flex-col gap-4 text-2xl'>
-                    <span>Location</span>
-                    <button onClick={() => openInNewTab('https://github.com/benkyli')}><FaGithub /></button>
-                    <button onClick={() => openInNewTab('https://www.linkedin.com/in/benjamin-li-73b622295')}><FaLinkedin /></button>
-                    <a href='mailto:benjaminli@hotmail.ca' className='flex items-center'>
-                        <MdOutlineEmail /> <p>benjaminli@hotmail.ca</p>
-                    </a>
-                    <span>phone</span>
-                </div>
+                <ContactSocials />
                 <ContactForm />
             </div>
         </div>
