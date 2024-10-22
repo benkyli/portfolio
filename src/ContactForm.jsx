@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { DevTool } from '@hookform/devtools';
 
-const access_key = 'e3f851c2-ddb3-47bc-99d2-c45fbb45adf7';
+const access_key = 'INSERT ACCESS KEY';
 
 export default function ContactForm() {
 
@@ -110,13 +110,13 @@ export default function ContactForm() {
                     <p className='error'>{errors.contact_message?.message}</p>
                 </div>
                 {/* spam honeypot trap; not an actual password */}
-                <input type="text" id="botcheck" className={'hidden'} tabIndex="-1" autoComplete="false"
+                <input type='text' id='botcheck' className={'hidden'} tabIndex='-1' autoComplete='false'
                     {...register('botcheck')}
                 />
                 <button type='submit' disabled={watch('password')}>Send Message</button>
                 {/* submission success messages */}
-                {isSubmitSuccessful && isSuccess && (<p className='text-green-500'>Message sent!</p>)}
-                {isSubmitSuccessful && !isSuccess && (<p className='text-red-600'>Message failed to send. Please try again.</p>)}
+                {isSubmitSuccessful && isSuccess && (<p className='text-green-500'>{Message}</p>)}
+                {isSubmitSuccessful && !isSuccess && (<p className='text-red-600'>{Message}</p>)}
             </form>
             <DevTool control={control} />
         </div>
