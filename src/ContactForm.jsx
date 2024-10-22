@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { DevTool } from '@hookform/devtools';
 
 const access_key = 'INSERT ACCESS KEY';
 
@@ -8,7 +7,6 @@ export default function ContactForm() {
 
     // get methods from useForm and set default values
     const { register,
-        control,
         handleSubmit,
         formState: { errors, isSubmitSuccessful },
         getValues,
@@ -27,8 +25,6 @@ export default function ContactForm() {
     const [Message, setMessage] = useState("");
 
     const onSubmit = async (data, e) => {
-        console.log(data);
-
         // check honeypot
         if (getValues('password')) { return };
 
@@ -118,7 +114,6 @@ export default function ContactForm() {
                 {isSubmitSuccessful && isSuccess && (<p className='text-green-500'>{Message}</p>)}
                 {isSubmitSuccessful && !isSuccess && (<p className='text-red-600'>{Message}</p>)}
             </form>
-            <DevTool control={control} />
         </div>
     )
 }
