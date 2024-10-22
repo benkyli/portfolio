@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { DevTool } from '@hookform/devtools';
 
-const access_key = 'INSERT ACCESS KEY';
+const access_key = 'e3f851c2-ddb3-47bc-99d2-c45fbb45adf7';
 
 export default function ContactForm() {
 
@@ -27,6 +27,7 @@ export default function ContactForm() {
     const [Message, setMessage] = useState("");
 
     const onSubmit = async (data, e) => {
+        console.log(data);
 
         // check honeypot
         if (getValues('password')) { return };
@@ -42,6 +43,7 @@ export default function ContactForm() {
         })
             .then(async (response) => {
                 let json = await response.json();
+                console.log(json);
                 if (json.success) {
                     setIsSuccess(true);
                     setMessage(json.message);
@@ -108,8 +110,8 @@ export default function ContactForm() {
                     <p className='error'>{errors.contact_message?.message}</p>
                 </div>
                 {/* spam honeypot trap; not an actual password */}
-                <input type="text" name="password_botcheck" className={'hidden'} tabIndex="-1" autoComplete="false"
-                    {...register('password')}
+                <input type="text" id="botcheck" className={'hidden'} tabIndex="-1" autoComplete="false"
+                    {...register('botcheck')}
                 />
                 <button type='submit' disabled={watch('password')}>Send Message</button>
                 {/* submission success messages */}
