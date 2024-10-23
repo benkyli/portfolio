@@ -26,7 +26,7 @@ export default function ContactForm() {
 
     const onSubmit = async (data, e) => {
         // check honeypot
-        if (getValues('password')) { return };
+        if (getValues('botcheck')) { return };
 
         // attempt to send message through api
         await fetch("https://api.web3forms.com/submit", {
