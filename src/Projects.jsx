@@ -1,16 +1,15 @@
-import ProjectCard from './ProjectCard.jsx'
+import { ProjectData } from '../src/data/projects.js';
+import ProjectCard from './ProjectCard.jsx';
 
 export default function Projects() {
-    // pass props into each project card
-    return(
+
+    const projects = ProjectData.map(project => <ProjectCard project={project} />)
+
+    return (
         <div id='projects' className='section'>
             <h2 className='heading'>Projects</h2>
             <div className='content-container gap-4 justify-center'>
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
+                {projects}
             </div>
         </div>
     )
