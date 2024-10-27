@@ -5,7 +5,7 @@ export const ProjectData = [
     {
         id: 0,
         title: "Youtube Live Chat Scroller",
-        image: FaYoutube,
+        image: <FaYoutube />,
         description: "This webapp attempts to recreate the bullet chat scrolling of live stream platforms like Bilibili and Niconico using YouTube's data API. The intended purpose of the app is to be used as an OBS chat overlay.",
         link: "https://github.com/benkyli/Youtube-Live-Chat-Scroller",
         tools: [
@@ -18,7 +18,7 @@ export const ProjectData = [
     {
         id: 1,
         title: "Guitar Chord Identifier",
-        image: FaGuitar,
+        image: <FaGuitar />,
         description: "Class identifier that allows you to categorize and classify guitar chords in real time",
         link: "https://github.com/benkyli/Guitar-Chord-Identifier",
         tools: [
@@ -30,7 +30,7 @@ export const ProjectData = [
     {
         id: 2,
         title: "Portfolio Webssite",
-        image: FaFolder,
+        image: <FaFolder />,
         description: "My portfolio website created using React and Tailwind",
         link: "https://github.com/benkyli/portfolio",
         tools: [

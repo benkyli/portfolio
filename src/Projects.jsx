@@ -1,9 +1,10 @@
-import { ProjectData } from '../src/data/projects.js';
+import { ProjectData } from '../src/data/projects.jsx';
 import ProjectCard from './ProjectCard.jsx';
 
 export default function Projects() {
 
-    const projects = ProjectData.map(project => <ProjectCard project={project} />)
+    const projects = ProjectData.map(project =>
+        <ProjectCard key={project.id} {...project} />)
 
     return (
         <div id='projects' className='section'>
