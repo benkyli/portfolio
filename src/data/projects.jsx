@@ -29,7 +29,7 @@ export const ProjectData = [
     },
     {
         id: 2,
-        title: "Portfolio Webssite",
+        title: "Portfolio Website",
         image: <FaFolder />,
         description: "My portfolio website created using React and Tailwind",
         link: "https://github.com/benkyli/portfolio",
@@ -40,15 +40,15 @@ export const ProjectData = [
             "Web3Forms"
         ]
     },
-    // {
-    //     id: 3,
-    //     title: "Rumination and Stroop Task Thesis",
-    //     image: GiBrain,
-    //     description: ,
-    //     link: ,
-    //     tools: [
+    {
+        id: 3,
+        title: "Rumination and Stroop Task Thesis",
+        image: <GiBrain />,
+        description: "",
+        link: "",
+        tools: [
 
-    //     ]
-    // },
+        ]
+    },
 
 ];

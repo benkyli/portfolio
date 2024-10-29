@@ -168,7 +168,7 @@ button:hover {
 
 /* project section */
 .project-card {
-    min-width: 400px;
+    max-width: 400px;
     min-height: 400px;
     border-radius: 10px;
     border-color: black;

@@ -4,20 +4,17 @@ import propTypes from 'prop-types';
 export default function ProjectCard(props) {
 
     return (
-        <span className='project-card'>
-            {props.image}
-            <hr />
-            <h3 className='project-title'>{props.title}</h3>
+        <span className='project-card relative'>
             <AiOutlineExpandAlt />
+            <span className='flex justify-center text-8xl pb-4'>{props.image}</span>
+            <p className='flex justify-center text-xl'>{props.title}</p>
             <hr />
-            <h4 className='project-description'>{props.description}</h4>
-            <hr />
-            <span className='tool-tags flex gap-2'>
-                <ul>
-                    {props.tools.map((tool, i) =>
-                        <li key={i}>{tool}</li>)}
-                </ul>
-            </span>
+            <p className='pt-1 pb-1'>{props.description}</p>
+            <ul className='flex gap-1 absolute bottom-0 pb-3'>
+                {props.tools.map((tool, i) =>
+                    <li className='border-2 rounded-full p-1  bg-neutral-500' key={i}>{tool}</li>)}
+            </ul>
+
         </span>
     )
 }
