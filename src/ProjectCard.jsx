@@ -13,7 +13,6 @@ export default function ProjectCard(props) {
                 {props.tools.map((tool, i) =>
                     <li className='border-2 rounded-full p-1 bg-neutral-500 flex justify-center items-center' key={i}>{tool}</li>)}
             </ul>
-
         </span>
     )
 }

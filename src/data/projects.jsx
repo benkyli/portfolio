@@ -1,6 +1,6 @@
 import { FaYoutube, FaGuitar, FaFolder } from "react-icons/fa";
 import { GiBrain } from "react-icons/gi";
-// not sure how to import icons for images
+
 export const ProjectData = [
     {
         id: 0,

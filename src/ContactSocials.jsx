@@ -5,17 +5,12 @@ import { openInNewTab } from './utils/utils.js';
 
 export default function ContactSocials() {
 
-    const openInNewTab = (url) => {
-        const newTab = window.open(url, '_blank', 'noopener,noreferrer');
-        if (newTab) newTab.opener = null
-    }
-
     return (
         <div className='socials flex flex-col gap-4 text-2xl'>
             <div className='social-field'>
                 <IoLocationSharp /> <span>Markham, ON, CA</span>
             </div>
-            <a href='mailto:benjaminli@hotmail.ca' className='social-field'>
+            <a className='social-field' href='mailto:benjaminli@hotmail.ca'>
                 <MdOutlineEmail /> <p>benjaminli@hotmail.ca</p>
             </a>
             <div className='social-field'>
