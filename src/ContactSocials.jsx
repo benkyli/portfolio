@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
+import { openInNewTab } from './utils/utils.js';
 
 export default function ContactSocials() {
 

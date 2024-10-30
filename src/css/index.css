@@ -27,10 +27,14 @@ a:active {
     text-decoration: none;
 }
 
-a:hover,
-button:hover {
-    color: #acacac
+.link-hover {
+
+    a:hover,
+    button:hover {
+        color: #acacac
+    }
 }
+
 
 /* shared classes for each section*/
 .heading {
@@ -166,10 +170,15 @@ button:hover {
     align-items: center;
 }
 
+.resume-box:hover {
+    background-color: rgb(66, 66, 66);
+}
+
 /* project section */
 .project-card {
-    max-width: 400px;
-    min-height: 400px;
+    width: 25em;
+    min-width: 20em;
+    min-height: 25em;
     border-radius: 10px;
     border-color: black;
     background-color: rgb(140, 96, 83);
@@ -177,6 +186,11 @@ button:hover {
     flex-direction: column;
     padding: 1rem;
     margin: 1rem;
+}
+
+.project-card:hover {
+    background-color: rgb(70, 44, 36);
+    cursor: pointer;
 }
 
 /* contact section */

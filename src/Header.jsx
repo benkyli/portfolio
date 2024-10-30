@@ -11,7 +11,7 @@ export default function Header() {
 
     return (
         <div>
-            <nav className='navbar'>
+            <nav className='navbar link-hover'>
                 <a className='home' href='/'>BL</a>
                 <div className={isOpen ? 'navbarItems active' : 'navbarItems'}>
                     <a href='#about'>About</a>
