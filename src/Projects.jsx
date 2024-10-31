@@ -1,4 +1,4 @@
-import { ProjectData } from '../src/data/projects.jsx';
+import { ProjectData } from './data/projects.jsx';
 import ProjectCard from './ProjectCard.jsx';
 
 export default function Projects() {
@@ -9,7 +9,7 @@ export default function Projects() {
     return (
         <div id='projects' className='section'>
             <h2 className='heading'>Projects</h2>
-            <div className='content-container gap-4 justify-center'>
+            <div className='content-container gap-4 '>
                 {projects}
             </div>
         </div>

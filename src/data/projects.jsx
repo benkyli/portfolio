@@ -6,7 +6,7 @@ export const ProjectData = [
         id: 0,
         title: "Youtube Live Chat Scroller",
         image: <FaYoutube />,
-        description: "This webapp attempts to recreate the bullet chat scrolling of live stream platforms like Bilibili and Niconico using YouTube's data API. The intended purpose of the app is to be used as an OBS chat overlay.",
+        description: "This app attempts to recreate the bullet chat scrolling of live stream platforms like Bilibili and Niconico using YouTube's data API. The intended purpose of the app is to be used as an OBS chat overlay.",
         link: "https://github.com/benkyli/Youtube-Live-Chat-Scroller",
         tools: [
             "Flask",
@@ -35,8 +35,8 @@ export const ProjectData = [
         link: "https://github.com/benkyli/portfolio",
         tools: [
             "React",
-            "react-hook-form",
             "TailwindCSS",
+            "React-Hook-Form",
             "Web3Forms"
         ]
     },
