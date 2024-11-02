@@ -57,9 +57,9 @@ export default function ContactForm() {
     };
 
     return (
-        <div>
+        <div className='text-xl'>
             <form className='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
-                <p className='text-xl'>Contact Form</p>
+                <p className='text-2xl'>Contact Form</p>
                 <input
                     type="hidden"
                     value={access_key}

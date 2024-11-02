@@ -19,7 +19,7 @@ export const ProjectData = [
         id: 1,
         title: "Guitar Chord Identifier",
         image: <FaGuitar />,
-        description: "Class identifier that allows you to categorize and classify guitar chords in real time",
+        description: "Class identifier that allows you to categorize and classify guitar chords in real time.",
         link: "https://github.com/benkyli/Guitar-Chord-Identifier",
         tools: [
             "TensorFlow",
@@ -31,7 +31,7 @@ export const ProjectData = [
         id: 2,
         title: "Portfolio Website",
         image: <FaFolder />,
-        description: "My portfolio website created using React and Tailwind",
+        description: "My portfolio website created using React and Tailwind.",
         link: "https://github.com/benkyli/portfolio",
         tools: [
             "React",

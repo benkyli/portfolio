@@ -5,7 +5,7 @@ export default function Contact() {
     return (
         <div id='contact' className='section link-hover'>
             <h2 className='heading'>Contact</h2>
-            <div className='content-container justify-center gap-16'>
+            <div className='content-container justify-center gap-32'>
                 <ContactSocials />
                 <ContactForm />
             </div>
