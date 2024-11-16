@@ -176,16 +176,17 @@ a:active {
 
 /* project section */
 .project-card {
-    width: 25em;
-    min-width: 20em;
-    min-height: 25em;
+    width: 26em;
+    min-width: 26em;
+    min-height: 26em;
     border-radius: 10px;
     border-color: black;
-    background-color: rgb(140, 96, 83);
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1.5rem;
     margin: 1rem;
+    box-shadow: 0 0 8px inset #0000003b;
+    backdrop-filter: blur(10px);
 }
 
 .project-card:hover {

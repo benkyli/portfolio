@@ -44,11 +44,11 @@ export const ProjectData = [
         id: 3,
         title: "Rumination and Stroop Task Thesis",
         image: <GiBrain />,
-        description: "",
+        description: "The three programming projects for my thesis on rumination, the Stroop task, and emotional processing.",
         link: "",
         tools: [
 
-        ]
+        ],
     },
 
 ];
