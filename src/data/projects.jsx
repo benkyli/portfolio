@@ -1,5 +1,4 @@
 import { FaYoutube, FaGuitar, FaFolder } from "react-icons/fa";
-import { GiBrain } from "react-icons/gi";
 
 export const ProjectData = [
     {
@@ -40,15 +39,4 @@ export const ProjectData = [
             "Web3Forms"
         ]
     },
-    {
-        id: 3,
-        title: "Rumination and Stroop Task Thesis",
-        image: <GiBrain />,
-        description: "The three programming projects for my thesis on rumination, the Stroop task, and emotional processing.",
-        link: "",
-        tools: [
-
-        ],
-    },
-
 ];
