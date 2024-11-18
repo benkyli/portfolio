@@ -1,18 +1,12 @@
 import { ThesisProjects } from './data/thesisProjects'
 import ProjectCard from './ProjectCard.jsx';
-import ThesisCard from './ThesisCard.jsx'
-
-const thesisInfo = ThesisProjects[0];
-const projects = ThesisProjects.splice(1)
 
 export default function ThesisModal() {
     return (
-        <div>
-            {/* apparently you can set the href of a modal */}
-            <ProjectCard {...thesisInfo} />
+        <div id='thesis-modal' className='flex absolute'>
             {/* these should show on state click*/}
-            {projects.map(project =>
-                <ThesisCard key={project.id} {...project} />
+            {ThesisProjects.map(project =>
+                <ProjectCard key={project.id} {...project} />
             )}
         </div>
     )
