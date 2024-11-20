@@ -2,7 +2,7 @@ export const ThesisProjects = [
     {
         id: 0,
         title: 'Data Analysis',
-        description: 'The parsing, preparation, and analysis of data from my thesis experiment.',
+        description: 'The parsing, preparation, analysis, and graphing of the data from my thesis experiment.',
         link: 'https://github.com/benkyli/Rumination-Stroop-Data-Analysis',
         tools: [
             'Pandas',

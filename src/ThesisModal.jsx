@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard.jsx';
 
 export default function ThesisModal() {
     return (
-        <div id='thesis-modal' className='flex absolute'>
+        <div id='thesis-modal'>
             {/* these should show on state click*/}
             {ThesisProjects.map(project =>
                 <ProjectCard key={project.id} {...project} />

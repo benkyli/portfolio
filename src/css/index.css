@@ -194,6 +194,12 @@ a:active {
     cursor: pointer;
 }
 
+#thesis-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* contact section */
 .social-field {
     display: flex;

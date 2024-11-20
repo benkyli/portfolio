@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default function ProjectCard(props) {
 
     return (
-        <span onClick={() => openInNewTab(props.link)} className='project-card relative'>
+        <span onClick={props.modal ? () => props.openModal() : () => openInNewTab(props.link)} className='project-card relative'>
             <span className='flex justify-center text-8xl pb-4'>{props.image}</span>
             <p className='flex justify-center text-2xl'>{props.title}</p>
             <hr />
