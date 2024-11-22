@@ -140,7 +140,7 @@ a:active {
 }
 
 .hero::before {
-    background-image: url('src/images/sunsetMtFuji.jpg');
+    background-image: url('../images/sunsetMtFuji.jpg');
     content: '';
     position: fixed;
     display: block;
