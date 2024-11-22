@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-const access_key = 'INSERT ACCESS KEY';
+const access_key = 'e3f851c2-ddb3-47bc-99d2-c45fbb45adf7';
 
 export default function ContactForm() {
 
@@ -59,7 +59,7 @@ export default function ContactForm() {
     return (
         <div className='text-xl'>
             <form className='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
-                <p className='text-2xl'>Contact Form</p>
+                <p className='text-3xl pb-2'>Contact Form</p>
                 <input
                     type="hidden"
                     value={access_key}
