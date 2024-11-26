@@ -28,7 +28,6 @@ a:active {
 }
 
 .link-hover {
-
     a:hover,
     button:hover {
         color: #acacac
@@ -127,6 +126,7 @@ a:active {
     }
 }
 
+
 /* hero section */
 .hero {
     overflow: auto;
@@ -185,15 +185,10 @@ a:active {
     display: flex;
     justify-content: center;
     align-items: center; 
+    flex-wrap: wrap;
 }
 
 /* contact section */
-.social-field {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
 .contact-form {
     width: auto;
     min-width: 500px;
