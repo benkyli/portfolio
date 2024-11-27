@@ -16,8 +16,23 @@ html {
 
 body {
     min-height: 100vh;
-    background-color: rgb(55, 43, 108);
+    background-color: black;
     color: white;
+}
+
+body::before {
+    background-image: url('../images/sunsetMtFuji.jpg');
+    content: '';
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: brightness(30%) blur(6px);
+    /* Transform prevents edge bleeding from blur */
+    transform: scale(1.03); 
 }
 
 a,
@@ -33,7 +48,6 @@ a:active {
         color: #acacac
     }
 }
-
 
 /* shared classes for each section*/
 .heading {
@@ -126,32 +140,14 @@ a:active {
     }
 }
 
-
 /* hero section */
 .hero {
-    overflow: auto;
-    position: static;
     height: 100vh;
     top: 45vh;
     display: flex;
     align-items: center;
-    place-content: center;
+    justify-content: center;
     flex-direction: column;
-}
-
-.hero::before {
-    background-image: url('../images/sunsetMtFuji.jpg');
-    content: '';
-    position: fixed;
-    display: block;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    filter: brightness(30%) blur(6px);
 }
 
 #name {
@@ -159,7 +155,6 @@ a:active {
     font-size: 4.5em;
     padding: 1em;
 }
-
 
 /* project section */
 .project-card {
