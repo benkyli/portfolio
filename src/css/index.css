@@ -35,6 +35,12 @@ body::before {
     transform: scale(1.03); 
 }
 
+@media (max-width: 500px) {
+    body::before {
+        transform: scale(1.1);
+    }
+}
+
 a,
 a:visited,
 a:active {
@@ -143,17 +149,41 @@ a:active {
 /* hero section */
 .hero {
     height: 100vh;
-    top: 45vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
+/* about section */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em 8em;
+    margin: 2em;
+}
+
+.about-text {
+    width: 50%;
+}
+
+@media (max-width: 1500px) {
+    .about-content {
+        padding: 1em;
+    }
+
+    .about-text {
+        min-width: 90%;
+        position: center;
+    }
+}
+
 #name {
     font-family: 'Chakra Petch';
     font-size: 4.5em;
     padding: 1em;
+    text-align: center;
 }
 
 /* project section */
