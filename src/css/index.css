@@ -12,12 +12,16 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
-    min-height: 100vh;
+    position: absolute;
+    height: 100%;
+    width: 100%;
     background-color: black;
     color: white;
+    overflow-x: hidden;
 }
 
 body::before {
@@ -33,6 +37,7 @@ body::before {
     filter: brightness(30%) blur(6px);
     /* Transform prevents edge bleeding from blur */
     transform: scale(1.03); 
+    background-position: center center;
 }
 
 @media (max-width: 500px) {
@@ -72,6 +77,16 @@ a:active {
     margin: 2em;
 }
 
+@media (max-width: 500px){
+    .heading {
+        display: flex;
+        justify-content: center;
+    }
+    .content-container {
+        position: center;
+    }
+}
+
 /* header + nav section */
 .navbar {
     display: flex;
@@ -83,16 +98,9 @@ a:active {
     z-index: 999;
     align-items: center;
     justify-content: space-between;
-}
-
-.navbar::before {
-    /* this enables nested backdrop blurs */
-    content: '';
-    position: absolute;
-    backdrop-filter: blur(10px);
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    background-color: rgb(57, 57, 57);
+    overflow-y:scroll;
+    
 }
 
 .navbarItems {
@@ -107,6 +115,10 @@ a:active {
 }
 
 @media (max-width: 800px) {
+    .navbar {
+        background-color: rgb(61, 61, 61);
+    }
+
     .navbarItems {
         position: fixed;
         display: flex;
@@ -155,6 +167,13 @@ a:active {
     flex-direction: column;
 }
 
+#name {
+    font-family: 'Chakra Petch';
+    font-size: 4.5em;
+    padding: 1em;
+    text-align: center;
+}
+
 /* about section */
 .about-content {
     display: flex;
@@ -174,17 +193,11 @@ a:active {
     }
 
     .about-text {
-        min-width: 90%;
+        min-width: 90vw;
         position: center;
     }
 }
 
-#name {
-    font-family: 'Chakra Petch';
-    font-size: 4.5em;
-    padding: 1em;
-    text-align: center;
-}
 
 /* project section */
 .project-card {
@@ -211,6 +224,13 @@ a:active {
     justify-content: center;
     align-items: center; 
     flex-wrap: wrap;
+}
+
+@media (max-width: 500px) {
+    .project-card {
+        min-width: 95vw;
+        
+    }
 }
 
 /* contact section */
@@ -255,5 +275,11 @@ a:active {
 
     .error {
         color: red;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-form {
+        min-width: 95vw;
     }
 }
