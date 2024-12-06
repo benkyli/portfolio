@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { IconContext } from 'react-icons';
-import { IoMenu, IoClose } from "react-icons/io5";
+import { IoMenu, IoClose } from 'react-icons/io5';
+import bee from './images/beeWhite.png';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,9 @@ export default function Header() {
     return (
         <div>
             <nav className='navbar link-hover'>
-                <a className='home' href='/'>BL</a>
+                <a className='home' href='/'>
+                    <img className='size-24' src={bee} />
+                </a>
                 <div className={isOpen ? 'navbarItems active' : 'navbarItems'}>
                     <a href='#about'>About</a>
                     <a href='#projects'>Projects</a>

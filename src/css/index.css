@@ -98,9 +98,8 @@ a:active {
     z-index: 999;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(57, 57, 57);
-    overflow-y:scroll;
-    
+    background-color: rgb(60, 60, 60);
+    overflow-y: scroll;
 }
 
 .navbarItems {
