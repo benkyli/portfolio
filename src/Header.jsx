@@ -14,7 +14,7 @@ export default function Header() {
         <div>
             <nav className='navbar link-hover'>
                 <a className='home' href='/'>
-                    <img className='size-24' src={bee} />
+                    <img className='size-12' src={bee} />
                 </a>
                 <div className={isOpen ? 'navbarItems active' : 'navbarItems'}>
                     <a href='#about'>About</a>
