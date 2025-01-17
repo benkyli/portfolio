@@ -17,9 +17,9 @@ export default function Header() {
                     <img className='size-12' src={bee} />
                 </a>
                 <div className={isOpen ? 'navbarItems active' : 'navbarItems'}>
-                    <a href='#about'>About</a>
-                    <a href='#projects'>Projects</a>
-                    <a href='#contact'>Contact</a>
+                    <a href='#about' onClick={toggleMenu}>About</a>
+                    <a href='#projects' onClick={toggleMenu}>Projects</a>
+                    <a href='#contact' onClick={toggleMenu}>Contact</a>
                 </div>
                 <IconContext.Provider value={{ style: { cursor: 'pointer' } }}>
                     <a className='menuToggle' onClick={toggleMenu}>{isOpen ? <IoClose /> : <IoMenu />}</a>
