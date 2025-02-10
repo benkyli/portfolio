@@ -12,7 +12,8 @@ export const ProjectData = [
             "Flask",
             "Bootstrap",
             "Youtube API",
-            "OAuth 2.0"
+            "OAuth",
+            "WebSocket"
         ]
     },
     {
