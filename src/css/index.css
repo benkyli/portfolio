@@ -12,7 +12,6 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
@@ -21,29 +20,6 @@ body {
     width: 100%;
     background-color: black;
     color: white;
-    overflow-x: hidden;
-}
-
-body::before {
-    background-image: url('../images/sunsetMtFuji.jpg');
-    content: '';
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-    filter: brightness(30%) blur(6px);
-    /* Transform prevents edge bleeding from blur */
-    transform: scale(1.03); 
-    background-position: center center;
-}
-
-@media (max-width: 500px) {
-    body::before {
-        transform: scale(1.1);
-    }
 }
 
 a,
@@ -90,7 +66,7 @@ a:active {
 /* header + nav section */
 .navbar {
     display: flex;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
     font-size: 2rem;
@@ -99,7 +75,7 @@ a:active {
     align-items: center;
     justify-content: space-between;
     background-color: rgb(58, 58, 58);
-    overflow-y: scroll;
+   
 }
 
 .navbarItems {
@@ -116,6 +92,7 @@ a:active {
 @media (max-width: 800px) {
     .navbar {
         background-color: rgb(61, 61, 61);
+        padding: 1em, 0.5em
     }
 
     .navbarItems {
@@ -124,7 +101,7 @@ a:active {
         right: -100vw;
         padding: 2rem;
         width: 100vw;
-        top: 5.1rem;
+        top: 7rem;
         height: 100vh;
         flex-direction: column;
         justify-content: flex-start;
@@ -166,6 +143,19 @@ a:active {
     flex-direction: column;
 }
 
+.hero::before {
+    background-image: url('../images/sunsetMtFuji.jpg');
+    content: '';
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background-size: cover;
+    z-index: -1;
+    filter: brightness(30%) blur(6px);
+    background-position: center center;
+}
+
 #name {
     font-family: 'Chakra Petch';
     font-size: 4.5em;
@@ -192,7 +182,7 @@ a:active {
     }
 
     .about-text {
-        min-width: 90vw;
+        min-width: 85vw;
         position: center;
     }
 }
@@ -227,7 +217,7 @@ a:active {
 
 @media (max-width: 500px) {
     .project-card {
-        min-width: 95vw;
+        min-width: 85vw;
         
     }
 }
@@ -279,6 +269,6 @@ a:active {
 
 @media (max-width: 500px) {
     .contact-form {
-        min-width: 95vw;
+        min-width: 80vw;
     }
 }

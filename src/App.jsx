@@ -9,13 +9,13 @@ import './css/fonts.css';
 
 export default function App() {
     return (
-        <div>
-            <Header />
-            <Hero />
-            <About />
-            <Projects />
-            <Contact />
-            <Footer />
-        </div>
+            <div className='overflow-x-hidden'>
+                <Header />
+                <Hero />
+                <About />
+                <Projects />
+                <Contact />
+                <Footer />
+            </div>
     )
 }
