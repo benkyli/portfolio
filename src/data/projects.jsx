@@ -25,7 +25,8 @@ export const ProjectData = [
         tools: [
             "TensorFlow",
             "OpenCV",
-            "Python"
+            "Python",
+            "NumPy"
         ]
     },
     {

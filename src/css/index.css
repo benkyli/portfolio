@@ -74,8 +74,6 @@ a:active {
     z-index: 999;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(58, 58, 58);
-   
 }
 
 .navbarItems {
@@ -90,11 +88,6 @@ a:active {
 }
 
 @media (max-width: 800px) {
-    .navbar {
-        background-color: rgb(61, 61, 61);
-        padding: 1em, 0.5em
-    }
-
     .navbarItems {
         position: fixed;
         display: flex;
@@ -121,7 +114,6 @@ a:active {
             background-color: #3c3c3c1c;
             color: rgb(212, 212, 212);
         }
-
     }
 
     .navbarItems.active {
@@ -198,9 +190,10 @@ a:active {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
+    padding-bottom: 2rem;
     margin: 1rem;
     box-shadow: 0 0 8px inset #0000003b;
-    backdrop-filter: blur(10px);
+    background-color: #272727;
 }
 
 .project-card:hover {
@@ -234,6 +227,7 @@ a:active {
     backdrop-filter: blur(10px);
     box-shadow: 0 0 8px inset #0000003b;
     border-radius: 10px;
+    background-color: #272727;
 
     .form-section {
         display: flex;
@@ -243,20 +237,20 @@ a:active {
     input {
         height: 2rem;
         padding: 0.5rem;
-        background: rgba(36, 36, 36, 0.534);
+        background: rgb(26, 25, 25);
     }
 
     textarea {
         height: 6rem;
-        background: rgba(36, 36, 36, 0.534);
+        background: rgb(26, 25, 25);
         padding: 0.4rem 0.6rem;
     }
 
     button {
         border-radius: 5px;
         border: solid;
-        border-color: rgb(34, 34, 34);
-        background-color: rgba(0, 0, 0, 0.216);
+        border-color: rgb(20, 20, 20);
+        background: rgb(26, 25, 25);
         padding: 1rem;
         display: inline-block;
         width: auto;

@@ -3,7 +3,7 @@ import { IconContext } from 'react-icons';
 import { IoMenu, IoClose } from 'react-icons/io5';
 import bee from './images/beeWhite.png';
 
-export default function Header() {
+export default function Header({ bgColour }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -12,7 +12,7 @@ export default function Header() {
 
     return (
         <div>
-            <nav className='navbar link-hover'>
+            <nav className='navbar link-hover' style={{backgroundColor: bgColour}}>
                 <a className='home' href='/'>
                     <img className='size-12' src={bee} />
                 </a>
