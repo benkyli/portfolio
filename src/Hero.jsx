@@ -1,10 +1,12 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { openInNewTab } from './utils/utils.js';
 
-export default function Hero({ heroOpacity }) {
+export default function Hero({ scrollProgress }) {
     const name = 'Benjamin Li';
     const git_link = 'https://github.com/benkyli';
     const linkedin_link = 'https://www.linkedin.com/in/benjamin-li-73b622295';
+
+    const heroOpacity = Math.max(0.17, 1 - scrollProgress);
 
     return (
      

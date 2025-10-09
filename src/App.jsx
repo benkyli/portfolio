@@ -23,24 +23,17 @@ export default function App() {
         };
     }, []);
   
-    let scrollOpacity = 1;
-    const colourLightest = 55;
-    let rgb = colourLightest;
+    let scrollProgress = 1;
     const fadeEnd = window.innerHeight;
     if (scrollPosition < fadeEnd) {
-        const scrollProgress = scrollPosition / fadeEnd;
-        scrollOpacity = Math.max(0.17, 1 - scrollProgress);
-        rgb = Math.max(10, colourLightest - colourLightest * scrollProgress)
+        scrollProgress = scrollPosition / fadeEnd;
     }
-    else {
-        scrollOpacity = 0.17;
-        rgb = 10;
-    }
+ 
 
     return (
             <div className='overflow-x-hidden'>
-                <Header bgColour={`rgb(${rgb}, ${rgb}, ${rgb})`}/>
-                <Hero heroOpacity={scrollOpacity}/>
+                <Header scrollProgress={scrollProgress} />
+                <Hero scrollProgress={scrollProgress} />
                 <About />
                 <Projects />
                 <Contact />
