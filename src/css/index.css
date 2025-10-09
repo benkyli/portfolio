@@ -194,11 +194,16 @@ a:active {
     margin: 1rem;
     box-shadow: 0 0 8px inset #0000003b;
     background-color: #272727;
+    position: relative;
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 200ms;
 }
 
 .project-card:hover {
-    background-color: rgb(70, 44, 36);
-    cursor: pointer;
+    /* background-color: rgb(70, 44, 36); */
+    box-shadow: 0 15px 25px -5px rgba(216, 114, 101, 0.445),
+                0 8px 10px -6px rgba(216, 114, 101, 0.445);
 }
 
 #thesis-section {
