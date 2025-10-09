@@ -91,7 +91,7 @@ a:active {
     .navbarItems {
         position: fixed;
         display: flex;
-        right: -100vw;
+        right: -200vw;
         padding: 2rem;
         width: 100vw;
         top: 7rem;
@@ -144,7 +144,7 @@ a:active {
     top: 0;
     background-size: cover;
     z-index: -1;
-    filter: brightness(30%) blur(6px);
+    filter: brightness(40%) blur(6px);
     background-position: center center;
 }
 
@@ -201,11 +201,16 @@ a:active {
     cursor: pointer;
 }
 
-#thesis-modal {
+#thesis-section {
     display: flex;
     justify-content: center;
     align-items: center; 
-    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 10px;
+    border-color: white;
+    background-color: pink;
+    padding: 2em;
+    margin: 4em;
 }
 
 @media (max-width: 500px) {
@@ -218,7 +223,7 @@ a:active {
 /* contact section */
 .contact-form {
     width: auto;
-    min-width: 500px;
+    min-width: 400px;
     height: auto;
     padding: 3em;
     display: flex;
@@ -263,6 +268,7 @@ a:active {
 
 @media (max-width: 500px) {
     .contact-form {
-        min-width: 80vw;
+        min-width: 60vw;
+        padding: 1em;
     }
 }
