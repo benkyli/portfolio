@@ -38,18 +38,20 @@ a:active {
 
 /* shared classes for each section*/
 .heading {
-    font-size: 2em;
+    font-size: 3em;
     font-family: "Roboto Mono";
-    padding: 3.5em 10vw 2em;
+    padding: 1em;
     margin: 2em 2em 0;
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 
 .content-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 2em 8em;
+    padding: 2em;
+    padding-bottom: 4em;
     margin: 2em;
 }
 
@@ -71,7 +73,7 @@ a:active {
     top: 0;
     font-size: 2rem;
     padding: 1em 3em;
-    z-index: 999;
+    z-index: 99;
     align-items: center;
     justify-content: space-between;
 }
@@ -143,7 +145,7 @@ a:active {
     width: 100vw;
     top: 0;
     background-size: cover;
-    z-index: -1;
+    z-index: -10;
     filter: brightness(40%) blur(6px);
     background-position: center center;
 }
@@ -192,7 +194,6 @@ a:active {
     padding: 1.5rem;
     padding-bottom: 2rem;
     margin: 1rem;
-    box-shadow: 0 0 8px inset #0000003b;
     background-color: #272727;
     position: relative;
     cursor: pointer;
@@ -201,9 +202,8 @@ a:active {
 }
 
 .project-card:hover {
-    /* background-color: rgb(70, 44, 36); */
-    box-shadow: 0 15px 25px -5px rgba(216, 114, 101, 0.445),
-                0 8px 10px -6px rgba(216, 114, 101, 0.445);
+    box-shadow: 0 15px 25px -5px rgba(233, 107, 103, 0.445),
+                0 8px 10px -6px rgba(233, 107, 103, 0.445);
 }
 
 #thesis-section {
@@ -213,9 +213,9 @@ a:active {
     flex-direction: column;
     border-radius: 10px;
     border-color: white;
-    background-color: pink;
     padding: 2em;
-    margin: 4em;
+    margin: 2.5em 4em;
+    background-color: #303030;
 }
 
 @media (max-width: 500px) {
@@ -242,6 +242,10 @@ a:active {
     .form-section {
         display: flex;
         flex-direction: column;
+    }
+
+    label {
+        padding: 0.2rem;
     }
 
     input {

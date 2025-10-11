@@ -1,6 +1,6 @@
 import { ProjectData } from './data/projects.jsx';
 import ProjectCard from './ProjectCard.jsx';
-import ThesisModal from './ThesisModal.jsx'
+import ThesisSection from './ThesisSection.jsx'
 import { useState } from 'react';
 
 export default function Projects() {
@@ -16,10 +16,10 @@ export default function Projects() {
     return (
         <div id='projects' className='section'>
             <h2 className='heading'>Projects</h2>
+            <ThesisSection />
             <div className='content-container gap-4 '>
                 {projects}
             </div>
-            {modal ? <ThesisModal /> : null}
         </div>
     )
 }

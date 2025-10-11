@@ -10,7 +10,7 @@ export default function Header({ scrollProgress }) {
         setIsOpen(!isOpen);
     };
 
-    const colourLightest = 74;
+    const colourLightest = 75;
     const rgb = Math.max(12.5, colourLightest - colourLightest * scrollProgress)
     const headerRGB = `rgb(${rgb}, ${rgb}, ${rgb})`
 

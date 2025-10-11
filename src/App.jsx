@@ -29,7 +29,6 @@ export default function App() {
         scrollProgress = scrollPosition / fadeEnd;
     }
  
-
     return (
             <div className='overflow-x-hidden'>
                 <Header scrollProgress={scrollProgress} />

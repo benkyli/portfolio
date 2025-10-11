@@ -25,18 +25,9 @@ export const ProjectData = [
         tools: [
             "TensorFlow",
             "OpenCV",
+            "MediaPipe",
             "Python",
             "NumPy"
         ]
-    },
-    {
-        id: 2,
-        title: "Rumination and Stroop Task Thesis",
-        image: <GiBrain />,
-        description: "The three programming projects for my thesis on rumination, the Stroop task, and emotional processing. The projects involved data analysis, computational modelling, and experiment programming.",
-        link: '',
-        tools: [
-        ],
-        modal: true,
-    },
+    }
 ];
