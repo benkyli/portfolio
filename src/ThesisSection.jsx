@@ -23,7 +23,7 @@ export default function ThesisSection() {
                 <p className='relative cursor-pointer underline' onClick={() => openInNewTab(prepublishLink)}>Emotional modulation of inhibitory control in rumination from empirical and computational perspectives</p>
                 <p className='text-sm pt-1'>Manuscript accepted by Cognitive, Affective, and Behavioral Neuroscience, October 2025.</p>
                 <div className='pt-2 mt-2 border-t border-gray-500'>
-                    <b>Notes: </b>After graduation, I co-authored a disseration with my undergraduate lab that further expanded on the work from my thesis. The link above is the open source preprint, since the production of the accepted article is still in process. 
+                    <b>Note: </b>After graduation, I co-authored a manuscript with my undergraduate lab that further expanded on the work from my thesis. The link above is the open source preprint, since the production of the accepted article is still in process. 
                 </div>
             </div>
         </div>
