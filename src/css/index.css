@@ -181,7 +181,6 @@ a:active {
     }
 }
 
-
 /* project section */
 .project-card {
     width: 26em;
@@ -208,14 +207,28 @@ a:active {
 
 #thesis-section {
     display: flex;
- 
-  
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     border-radius: 10px;
     border-color: white;
     padding: 2em;
     margin: 2.5em 4em;
     background-color: #303030;
+}
+
+#thesis-card {
+    flex: 1;
+    border-width: 2px;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    background-color: #acacac;
+    cursor: pointer;
+    position: relative;
+}
+
+#thesis-card:hover {
+    background-color: grey;
 }
 
 @media (max-width: 500px) {

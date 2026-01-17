@@ -4,6 +4,7 @@ import ThesisSection from './ThesisSection.jsx'
 import { useState } from 'react';
 
 export default function Projects() {
+    const gitHubLink = "https://github.com/benkyli";
 
     const [modal, setModal] = useState(false);
     const openModal = () => {
@@ -14,12 +15,15 @@ export default function Projects() {
         <ProjectCard key={project.id} {...project} openModal={openModal} />)
 
     return (
-        <div id='projects' className='section'>
+        <div id='projects' >
             <h2 className='heading'>Projects</h2>
-            <ThesisSection />
-            <div className='content-container gap-4 '>
-                {projects}
+            <div className='content-container'>
+                <ThesisSection />
+                <div className='content-container gap-4 '>
+                    {projects}
+                </div>
             </div>
+            
         </div>
     )
 }

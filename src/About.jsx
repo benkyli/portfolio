@@ -3,7 +3,7 @@ import headshot from './images/headshot.jpg';
 
 export default function About() {
     return (
-        <div id='about' className='section'>
+        <div id='about'>
             <div className='heading'>About</div>
             <div className='about-content gap-24'>
                 <img src={headshot} alt='headshot image' className='max-h-80 min-w-52 brightness-90'></img>

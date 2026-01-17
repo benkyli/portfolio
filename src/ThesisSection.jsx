@@ -21,7 +21,7 @@ export default function ThesisSection() {
                     <p>Publication Update:</p>
                 </div>
                 <p className='relative cursor-pointer underline' onClick={() => openInNewTab(link)}>Emotional modulation of inhibitory control in rumination from empirical and computational perspectives</p>
-                <p className='text-sm pt-1'>Manuscript accepted by Cognitive, Affective, and Behavioral Neuroscience</p>
+                <p className='text-sm pt-1'>Manuscript accepted by Cognitive, Affective, and Behavioral Neuroscience, October 2025</p>
                 <div className='pt-2 mt-2 border-t border-gray-500'>
                     <b>Note: </b>After graduation, I co-authored a manuscript with my undergraduate lab that further expanded on the work from my thesis.
                 </div>

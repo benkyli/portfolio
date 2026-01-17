@@ -1,4 +1,5 @@
-import { FaYoutube, FaGuitar, FaFolder } from "react-icons/fa";
+import { FaYoutube, FaGuitar} from "react-icons/fa";
+import { MdSportsTennis } from "react-icons/md"; // funny because this is a tennis icon that I'm using for pickleball
 
 export const ProjectData = [
     {
@@ -29,6 +30,21 @@ export const ProjectData = [
             "MediaPipe",
             "Python",
             "NumPy"
+        ]
+    },
+    {
+        id: 2,
+        title: "Pickleball Booking Bot",
+        image: <MdSportsTennis />,
+        description: "A Tkinter Python app that books public pickeball courts in Hamilton through concurrent requests and bypasses captchas using Selenium. This was created to help my brother.",
+        link: "https://github.com/benkyli/Pickleball-Booking-Bot",
+        tools: [
+            "Web Scraping",
+            "Requests",
+            "Tkinter",
+            "Selenium",
+            "Asyncio",
+            "Beautiful Soup"
         ]
     }
 ];
