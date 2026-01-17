@@ -13,8 +13,8 @@ export default function Hero({ scrollProgress }) {
             <div className='hero' style={{opacity: heroOpacity}}>
                 <div id='name'>{name}</div>
                 <div className='flex gap-10 text-5xl link-hover'>
-                    <button onClick={() => openInNewTab({ git_link })}><FaGithub /></button>
-                    <button onClick={() => openInNewTab({ linkedin_link })}><FaLinkedin /></button>
+                    <button onClick={() => openInNewTab(git_link)}><FaGithub /></button>
+                    <button onClick={() => openInNewTab(linkedin_link)}><FaLinkedin /></button>
                 </div>
             </div>
        
