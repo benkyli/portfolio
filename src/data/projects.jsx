@@ -1,5 +1,6 @@
 import { FaYoutube, FaGuitar} from "react-icons/fa";
 import { MdSportsTennis } from "react-icons/md"; // funny because this is a tennis icon that I'm using for pickleball
+import { FaGithub } from 'react-icons/fa';
 
 export const ProjectData = [
     {
@@ -36,7 +37,7 @@ export const ProjectData = [
         id: 2,
         title: "Pickleball Booking Bot",
         image: <MdSportsTennis />,
-        description: "A Tkinter Python app that books public pickeball courts in Hamilton through concurrent requests and bypasses captchas using Selenium. This was created to help my brother.",
+        description: "A Tkinter Python app that books public pickeball courts in Hamilton through concurrent requests and bypasses captchas using Selenium. I made this for my non-programmer brother.",
         link: "https://github.com/benkyli/Pickleball-Booking-Bot",
         tools: [
             "Web Scraping",
@@ -46,5 +47,12 @@ export const ProjectData = [
             "Asyncio",
             "Beautiful Soup"
         ]
+    },
+    {
+        id: -1,
+        title: "GitHub",
+        image: <FaGithub />,
+        link: "https://github.com/benkyli",
+        description: "See all of my repositories."
     }
 ];

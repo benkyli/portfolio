@@ -2,9 +2,20 @@ import { openInNewTab } from './utils/utils.js';
 import PropTypes from 'prop-types';
 
 export default function ProjectCard(props) {
+    // github ending card
+    if (props.id == -1) {
+         return (
+        <span onClick={() => openInNewTab(props.link)} className='project-card items-center justify-center'>
+            <span className='text-8xl pb-4'>{props.image}</span>
+            <p className='text-5xl font-bold'>{props.title}</p>
+            <p className='p-1 pt-4 pb-3 text-lg'>{props.description}</p>
+        </span>
+        )
+    }
 
+    // normal project card
     return (
-        <span onClick={props.modal ? () => props.openModal() : () => openInNewTab(props.link)} className='project-card'>
+        <span onClick={() => openInNewTab(props.link)} className='project-card'>
             <span className='flex justify-center text-8xl pb-4'>{props.image}</span>
             <p className='flex justify-center text-2xl'>{props.title}</p>
             <hr />

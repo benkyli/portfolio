@@ -4,7 +4,7 @@ import ThesisSection from './ThesisSection.jsx'
 import { useState } from 'react';
 
 export default function Projects() {
-    const gitHubLink = "https://github.com/benkyli";
+    
 
     const [modal, setModal] = useState(false);
     const openModal = () => {
@@ -19,11 +19,10 @@ export default function Projects() {
             <h2 className='heading'>Projects</h2>
             <div className='content-container'>
                 <ThesisSection />
-                <div className='content-container gap-4 '>
+                <div className='content-container gap-4'>
                     {projects}
                 </div>
             </div>
-            
         </div>
     )
 }
